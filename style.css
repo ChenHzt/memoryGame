@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.card[data-color]{
+    height: 30%;
+    width:23%;
+    /* background-color: attr(data-color); */
+}
+
+.card[data-status='closed']{
+    background-color: black;
+}
+
+.gameBoard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card--hidden{
+    background-color: aqua;
+}
