@@ -11,7 +11,8 @@
 }
 
 .card[data-status='closed']{
-    background-color: black;
+    background-image: url(/img/Gray-background.jpg);
+    background-size: 70%;
 }
 
 .gameBoard{
@@ -19,17 +20,52 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 90%;
     height: 100%;
 }
 
 body{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 70% 30%;
     height: 100vh;
     width: 100vw;
+    padding: 30px;
 }
 
 .card--hidden{
     background-color: aqua;
+}
+
+.sideBar{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.sideBar *{
+    margin: 20px 0;
+}
+
+@media(max-width:500px){
+    body{
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 80%;
+        padding: 5px;
+    }
+
+    .gameBoard{
+        grid-row-start: 2;
+        width: 100%;
+    }
+
+    h1{
+        display: none;
+    }
+
+    .sideBar{
+        flex-direction: row;
+    }
 }
